@@ -5,14 +5,11 @@ This project focuses on analyzing flight price data sourced from an Excel file (
 The analysis involves cleaning and transforming the data (e.g., splitting dates, encoding categorical variables), visualizing key trends (e.g., airline distribution), and summarizing the dataset's statistical properties. This project serves as a foundation for understanding flight pricing patterns and can be extended for predictive modeling or further statistical analysis.
 
 # Features
-Data Loading and Preprocessing: Load flight data from an Excel file and clean it for analysis.
-Feature Engineering: Extract day, month, and year from the Date_of_Journey column and drop redundant columns.
-Exploratory Data Analysis (EDA):
-Summary statistics of flight prices.
-Visualization of airline distribution using histograms with kernel density estimation (KDE).
-Count of flights per airline.
-Categorical Encoding: Use Scikit-learn's OneHotEncoder to transform categorical variables (Airline, Source, Destination) into a numerical format suitable for machine learning.
-Dataset Overview: Display the first and last few rows, column names, and data types.
+Load and clean flight data.
+Extract date components (day, month, year).
+EDA: Price stats, airline distribution (histogram + KDE).
+One-hot encode Airline, Source, Destination.
+
 # Tools and Libraries Used
 NumPy: For numerical operations and array handling.
 Pandas: For data manipulation and analysis.
@@ -20,18 +17,7 @@ Matplotlib: For creating static visualizations.
 Seaborn: For enhanced statistical visualizations.
 Scikit-learn: For one-hot encoding of categorical features.
 Openpyxl: For reading Excel files.
-# Dataset
-The dataset (flight_price.xlsx) contains 10,683 entries with the following key columns:
 
-Airline: Name of the airline (e.g., IndiGo, Air India).
-Source: Departure city (e.g., Bangalore, Kolkata).
-Destination: Arrival city (e.g., New Delhi, Cochin).
-Dep_Time: Departure time.
-Arrival_Time: Arrival time.
-Duration: Flight duration.
-Total_Stops: Number of stops (e.g., non-stop, 1 stop).
-Price: Ticket price (target variable).
-Additional columns like Route and Additional_Info.
 # Installation
 To run this project locally, follow these steps:
 
@@ -63,11 +49,7 @@ openpyxl
 jupyter notebook
 Open the flight_data_analysis.ipynb file and execute the cells.
 # Usage
-Place the flight_price.xlsx file in the project directory.
-Open the Jupyter Notebook (flight_data_analysis.ipynb) and run the cells sequentially to:
-Load and preprocess the data.
-Perform EDA with visualizations.
-Encode categorical variables for further analysis.
+Place flight_price.xlsx in the directory and run the notebook to preprocess the data and perform EDA with visualizations
 # Results
 EDA Insights: Jet Airways has the highest flight count (3,849), followed by IndiGo (2,053) and Air India (1,752).
 Price Statistics: The average flight price is approximately ₹9,087, with a minimum of ₹1,759 and a maximum of ₹79,512.
